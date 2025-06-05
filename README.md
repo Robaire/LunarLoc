@@ -10,7 +10,8 @@ Included `.csv` files contain only the rover's ground truth x, y, z position and
 
 ## LAC
 Included `.lac` files contain more detailed information, including the rover's ground truth 6-DOF pose, IMU data, rover configuration state, and camera images from the simulator. 
-Python utilities for access the content of `.lac` files are included in this repository, however `.lac` files are `.tar.gz` archives and can be extracted with `tar -xzf <file_name>.lac` if desired.
+Python utilities for access the content of `.lac` files are included in this repository.
+Alternatively, `.lac` files are `.tar.gz` archives and can be extracted with `tar -xzf <file_name>.lac` if desired.
 The internal structure of the archive is defined below.
 
 ```text
