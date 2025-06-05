@@ -3,14 +3,14 @@ Data and replay utilities for [LunarLoc]().
 
 # Datasets
 Seventeen individual traverses are provided in two data formats: `.csv` and `.lac`.
-Due to their size, `.lac` files are not included in this repository and can be found at [TODO]().
+Due to their size, `.lac` files are not included in this repository and can be found under [releases](https://github.com/Robaire/LunarLoc/releases).
 
 ## CSV
 Included `.csv` files contain only the rover's ground truth x, y, z position and any estimated boulder detections in the scene for each frame.
 
 ## LAC
 Included `.lac` files contain more detailed information, including the rover's ground truth 6-DOF pose, IMU data, rover configuration state, and camera images from the simulator. 
-Python utilities for access the content of `.lac` files are included in this repository.
+Python utilities to access the contents of `.lac` files are included in this repository.
 Alternatively, `.lac` files are `.tar.gz` archives and can be extracted with `tar -xzf <file_name>.lac` if desired.
 The internal structure of the archive is defined below.
 
