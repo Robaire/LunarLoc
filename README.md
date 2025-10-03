@@ -1,14 +1,16 @@
 # LunarLoc
-Data and replay utilities for [LunarLoc]().
+Data and replay utilities for [LunarLoc: Robust Global Localization for Autonomous Surface Operations on the Moon]() presented at [IEEE Aerospace 2026](https://www.aeroconf.org/) and [LunarLoc: Segment-Based Global Localization on the Moon](https://arxiv.org/abs/2506.16940) presented at [RSS 2025](https://roboticsconference.org/).
 
 # Datasets
+## IEEE 2026
+Traverses are provided under [releases](https://github.com/Robaire/LunarLoc/releases).
+File names indicate the map preset used and the traverse path mode: straight line or circle.
+
+## RSS 2025
 Seventeen individual traverses are provided in two data formats: `.csv` and `.lac`.
 Due to their size, `.lac` files are not included in this repository and can be found under [releases](https://github.com/Robaire/LunarLoc/releases).
 
-## CSV
-Included `.csv` files contain only the rover's ground truth x, y, z position and any estimated boulder detections in the scene for each frame.
-
-## LAC
+# LAC Files
 Included `.lac` files contain more detailed information, including the rover's ground truth 6-DOF pose, IMU data, rover configuration state, and camera images from the simulator. 
 Python utilities to access the contents of `.lac` files are included in this repository.
 Alternatively, `.lac` files are `.tar.gz` archives and can be extracted with `tar -xzf <file_name>.lac` if desired.
@@ -37,7 +39,7 @@ Two core classes, `FrameDataReader` and `CameraDataReader` are provided to acces
 An additional `PlaybackAgent` is provided to mock agent behavior synchronized to a `.lac` file.
 
 ## FrameDataReader
-The `FrameDataReader` provides direct access to [pandas](https://pandas.pydata.org/) `DataFrame`s for numerical data.
+The `FrameDataReader` provides direct access to [pandas](https://pandas.pydata.org/) `DataFrame`s for numeric data.
 
 ```python
 reader = FrameDataReader("./examples/example.lac")
